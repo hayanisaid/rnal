@@ -1,7 +1,8 @@
 {
   "name": "rnal",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.1.0",
+  "description": "Small animation library for  react-native'",
+  "main": "index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -18,6 +19,8 @@
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3"
   },
+  "author": "Said Hayani",
+  "license": "MIT",
   "jest": {
     "preset": "react-native"
   }
