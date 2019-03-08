@@ -8,26 +8,59 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight
+} from "react-native";
 
 type Props = {};
+type State = {
+  ready: boolean
+};
 
 import Fade from "./components/Fade";
 import SlideUp from "./components/SlideUp";
 import SlideDown from "./components/SlideDown";
-export default class App extends Component<Props> {
+import SlideInRight from "./components/SlideInRight";
+import Rotate from "./components/Rotate";
+import Zoom from "./components/Zoom";
+export default class App extends Component<Props, State> {
+  state = {
+    ready: false
+  };
   render() {
+    let { ready } = this.state;
     return (
       <View style={styles.container}>
-        <Fade style={styles.item} duration={300}>
+        <View style={{ flex: 1 }}>
+          <TouchableHighlight
+            onPress={() => this.setState({ ready: true })}
+            style={styles.btn}
+          >
+            <Text>Start</Text>
+          </TouchableHighlight>
+        </View>
+        {/* <Fade style={styles.item} duration={300} startWhen={ready}>
           <Text>Hello world center center center scsdgsdklgkdslgsdkl;;'</Text>
-        </Fade>
-        <SlideUp style={{ backgroundColor: "orange", flex: 1 }}>
+        </Fade> */}
+        {/* <SlideUp
+          style={{ backgroundColor: "orange", flex: 1 }}
+          startWhen={ready}
+        >
           <Text>Slide Up component</Text>
-        </SlideUp>
-        <SlideDown style={{ backgroundColor: "purple", flex: 1 }}>
-          <Text>Slide Down animation</Text>
-        </SlideDown>
+        </SlideUp> */}
+        <Zoom
+          sets={{ from: 0, to: 2 }}
+          direction="out"
+          style={{ backgroundColor: "purple", padding: 10 }}
+          duration={50}
+          startWhen={ready}
+        >
+          <Text>Slide infinite animation</Text>
+        </Zoom>
       </View>
     );
   }
@@ -36,9 +69,20 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     justifyContent: "center",
+    flexDirection: "column",
     alignItems: "center",
     backgroundColor: "#ccc"
+  },
+  btn: {
+    marginTop: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 150,
+    height: 60,
+    backgroundColor: "blue",
+    padding: 4
   },
   welcome: {
     fontSize: 20,
@@ -47,11 +91,11 @@ const styles = StyleSheet.create({
   },
   item: {
     width: 200,
-    height: 450,
+    height: 150,
     padding: 3,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#000"
+    backgroundColor: "#c00"
   },
   instructions: {
     textAlign: "center",

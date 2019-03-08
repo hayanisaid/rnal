@@ -8,6 +8,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.10.0",
     "react": "16.6.3",
     "react-native": "0.58.4",
     "styled-components": "^4.1.3"

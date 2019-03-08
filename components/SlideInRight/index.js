@@ -2,7 +2,6 @@
 
 import React, { Component } from "react";
 import { Text, View, Animated, StyleSheet } from "react-native";
-
 type Props = {
   children: any,
   style: Object,
@@ -14,14 +13,15 @@ type State = {
   duration: number
 };
 
-export default class Fade extends Component<Props, State> {
+export default class SlideLeft extends Component<Props, State> {
   state = {
     animatedValue: new Animated.Value(0),
     duration: this.props.duration || 500
   };
   static defaultProps = {
-    duration: 500
+    duration: 100
   };
+
   componentDidMount() {
     let { startWhen } = this.props;
     if (!this.props.hasOwnProperty("startWhen")) {
@@ -34,6 +34,7 @@ export default class Fade extends Component<Props, State> {
       this._start();
     }
   }
+
   _start = () => {
     Animated.timing(this.state.animatedValue, {
       toValue: 1,
@@ -43,12 +44,22 @@ export default class Fade extends Component<Props, State> {
   };
   render() {
     let { animatedValue } = this.state;
-    let { children, style, startWhen, ...props } = this.props;
-
+    let { children, style, ...props } = this.props;
     return (
       <Animated.View
         {...props}
-        style={{ ...style, opacity: this.state.animatedValue }}
+        style={{
+          ...style,
+          transform: [
+            {
+              translateX: animatedValue.interpolate({
+                inputRange: [0, 1],
+                outputRange: [300, 0]
+              })
+            },
+            { perspective: 1000 }
+          ]
+        }}
       >
         {children}
       </Animated.View>

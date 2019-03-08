@@ -6,21 +6,30 @@ type Props = {
   children: any,
   style: Object,
   duration: number,
-  startWhen: boolean
+  startWhen: boolean,
+  sets: Object,
+  infinite: boolean,
+  direction: string
 };
 type State = {
   animatedValue: Object,
   duration: number
 };
 
-export default class SlideUp extends Component<Props, State> {
+export default class Rotate extends Component<Props, State> {
   state = {
     animatedValue: new Animated.Value(0),
     duration: this.props.duration || 500
   };
   static defaultProps = {
-    duration: 300
+    duration: 100,
+    direction: "right",
+    sets: {
+      from: 0,
+      to: 180
+    }
   };
+
   componentDidMount() {
     let { startWhen } = this.props;
     if (!this.props.hasOwnProperty("startWhen")) {
@@ -35,15 +44,37 @@ export default class SlideUp extends Component<Props, State> {
   }
 
   _start = () => {
-    Animated.timing(this.state.animatedValue, {
-      toValue: 1,
-      duration: this.state.duration,
-      useNativeDriver: true
-    }).start();
+    let { infinite } = this.props;
+    if (infinite) {
+      Animated.loop(
+        Animated.timing(this.state.animatedValue, {
+          toValue: 1,
+          duration: this.state.duration,
+          useNativeDriver: true
+        })
+      ).start();
+    } else {
+      Animated.timing(this.state.animatedValue, {
+        toValue: 1,
+        duration: this.state.duration,
+        useNativeDriver: true
+      }).start();
+    }
   };
   render() {
     let { animatedValue } = this.state;
-    let { children, style, ...props } = this.props;
+    let {
+      children,
+      style,
+      sets: { from = 0, to = 180 },
+      ...props
+    } = this.props;
+
+    //  the direction the animation will start from
+    let directions = {
+      toRight: [`${from}deg` || "0deg", `${to}deg` || "180deg"],
+      toLeft: [`${from}deg` || "180deg", `${to}deg` || "0deg"]
+    };
     return (
       <Animated.View
         {...props}
@@ -51,9 +82,9 @@ export default class SlideUp extends Component<Props, State> {
           ...style,
           transform: [
             {
-              translateY: animatedValue.interpolate({
+              rotate: animatedValue.interpolate({
                 inputRange: [0, 1],
-                outputRange: [-300, 0]
+                outputRange: directions[direction]
               })
             },
             { perspective: 1000 }

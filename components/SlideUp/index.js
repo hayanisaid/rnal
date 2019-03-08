@@ -5,7 +5,8 @@ import { Text, View, Animated, StyleSheet } from "react-native";
 type Props = {
   children: any,
   style: Object,
-  duration: number
+  duration: number,
+  startWhen: boolean
 };
 type State = {
   animatedValue: Object,
@@ -21,11 +22,20 @@ export default class SlideUp extends Component<Props, State> {
     duration: 300
   };
   componentDidMount() {
-    this._start();
+    let { startWhen } = this.props;
+    if (!this.props.hasOwnProperty("startWhen")) {
+      this._start();
+    }
+  }
+  componentDidUpdate(prevProps: Object, prevState: Object) {
+    let { startWhen } = this.props;
+    if (startWhen !== prevProps.startWhen) {
+      this._start();
+    }
   }
 
   _start = () => {
-    Animated.spring(this.state.animatedValue, {
+    Animated.timing(this.state.animatedValue, {
       toValue: 1,
       duration: this.state.duration,
       useNativeDriver: true
