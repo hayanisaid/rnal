@@ -13,6 +13,7 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 type Props = {};
 
 import Fade from "./components/Fade";
+import SlideUp from "./components/SlideUp";
 export default class App extends Component<Props> {
   render() {
     return (
@@ -20,6 +21,9 @@ export default class App extends Component<Props> {
         <Fade style={styles.item} duration={300}>
           <Text>Hello world center center center scsdgsdklgkdslgsdkl;;'</Text>
         </Fade>
+        <SlideUp style={{ backgroundColor: "orange", flex: 1 }}>
+          <Text>Slide Up component</Text>
+        </SlideUp>
       </View>
     );
   }
