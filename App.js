@@ -7,23 +7,19 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import React, { Component } from "react";
+import { Platform, StyleSheet, Text, View } from "react-native";
 
 type Props = {};
-import AnimatedComponent from './elements/AnimatedComponent'
+
+import Fade from "./components/Fade";
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <AnimatedComponent/>
+        <Fade style={styles.item} duration={300}>
+          <Text>Hello world center center center scsdgsdklgkdslgsdkl;;'</Text>
+        </Fade>
       </View>
     );
   }
@@ -32,18 +28,26 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#ccc"
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    textAlign: "center",
+    margin: 10
+  },
+  item: {
+    width: 200,
+    height: 450,
+    padding: 3,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#000"
   },
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    textAlign: "center",
+    color: "#333333",
+    marginBottom: 5
+  }
 });
