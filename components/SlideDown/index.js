@@ -43,12 +43,10 @@ export default class SlideUp extends Component<Props, State> {
             {
               translateY: animatedValue.interpolate({
                 inputRange: [0, 1],
-                outputRange: [300, 0]
+                outputRange: [-300, 0]
               })
             },
-            {
-              perspective: 1000
-            }
+            { perspective: 1000 }
           ]
         }}
       >

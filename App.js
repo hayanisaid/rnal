@@ -14,6 +14,7 @@ type Props = {};
 
 import Fade from "./components/Fade";
 import SlideUp from "./components/SlideUp";
+import SlideDown from "./components/SlideDown";
 export default class App extends Component<Props> {
   render() {
     return (
@@ -24,6 +25,9 @@ export default class App extends Component<Props> {
         <SlideUp style={{ backgroundColor: "orange", flex: 1 }}>
           <Text>Slide Up component</Text>
         </SlideUp>
+        <SlideDown style={{ backgroundColor: "purple", flex: 1 }}>
+          <Text>Slide Down animation</Text>
+        </SlideDown>
       </View>
     );
   }
