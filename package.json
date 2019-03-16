@@ -26,6 +26,9 @@
     "type": "git",
     "url": "https://github.com/hayanisaid/react-native-animation-library.git"
   },
+  "bugs": {
+    "url": "https://github.com/hayanisaid/react-native-animation-library/issues"
+  },
   "jest": {
     "preset": "react-native"
   }
