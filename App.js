@@ -13,20 +13,32 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity,
+  Image
 } from "react-native";
+import styled from "styled-components/native";
 
 type Props = {};
 type State = {
   ready: boolean
 };
 
-import Fade from "./components/Fade";
-import SlideUp from "./components/SlideUp";
-import SlideDown from "./components/SlideDown";
-import SlideInRight from "./components/SlideInRight";
-import Rotate from "./components/Rotate";
-import Zoom from "./components/Zoom";
+// import Fade from "./components/Fade";
+// import SlideUp from "./components/SlideUp";
+// import SlideDown from "./components/SlideDown";
+// import SlideInRight from "./components/SlideInRight";
+// import Rotate from "./components/Rotate";
+// import Zoom from "./components/Zoom";
+import {
+  Fade,
+  SlideDown,
+  SlideInRight,
+  SlideUp,
+  Zoom,
+  Rotate,
+  SlideInLeft
+} from "./index";
 export default class App extends Component<Props, State> {
   state = {
     ready: false
@@ -34,15 +46,11 @@ export default class App extends Component<Props, State> {
   render() {
     let { ready } = this.state;
     return (
-      <View style={styles.container}>
-        <View style={{ flex: 1 }}>
-          <TouchableHighlight
-            onPress={() => this.setState({ ready: true })}
-            style={styles.btn}
-          >
-            <Text>Start</Text>
-          </TouchableHighlight>
-        </View>
+      <Container>
+        <Button onPress={() => this.setState({ ready: true })}>
+          <ButtonText>Start</ButtonText>
+        </Button>
+
         {/* <Fade style={styles.item} duration={300} startWhen={ready}>
           <Text>Hello world center center center scsdgsdklgkdslgsdkl;;'</Text>
         </Fade> */}
@@ -52,54 +60,58 @@ export default class App extends Component<Props, State> {
         >
           <Text>Slide Up component</Text>
         </SlideUp> */}
-        <Zoom
-          sets={{ from: 0, to: 2 }}
-          direction="out"
-          style={{ backgroundColor: "purple", padding: 10 }}
-          duration={50}
-          startWhen={ready}
-        >
-          <Text>Slide infinite animation</Text>
-        </Zoom>
-      </View>
+        <Fade duration={100} startWhen={ready}>
+          <Image
+            source={require("./images/flowrs.jpg")}
+            height={200}
+            width={450}
+            style={{ width: 350, height: 200 }}
+            resizeMode="cover"
+          />
+        </Fade>
+        {/* <SlideDown startWhen={ready}>
+          <Card>
+            <WhiteText>SlideDown animation</WhiteText>
+          </Card>
+        </SlideDown> */}
+      </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-    backgroundColor: "#ccc"
-  },
-  btn: {
-    marginTop: 60,
-    justifyContent: "center",
-    alignItems: "center",
-    width: 150,
-    height: 60,
-    backgroundColor: "blue",
-    padding: 4
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  item: {
-    width: 200,
-    height: 150,
-    padding: 3,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#c00"
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
+const WhiteText = styled.Text`
+  color: #f4f4f4;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+`;
+const Button = styled.TouchableOpacity`
+  background: #560764;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+  border-radius: 10px;
+`;
+const Card = styled.View`
+  width: 150px;
+  height: 150px;
+  border-radius: 13px;
+  justify-content: center;
+  align-items: center;
+  background: #572121;
+  padding: 10px;
+`;
+const ButtonText = styled.Text`
+  color: #f4f4f4;
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+const Container = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+`;

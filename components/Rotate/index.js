@@ -23,7 +23,7 @@ export default class Rotate extends Component<Props, State> {
   };
   static defaultProps = {
     duration: 100,
-    direction: "right",
+    direction: "toRight",
     sets: {
       from: 0,
       to: 180
@@ -67,6 +67,7 @@ export default class Rotate extends Component<Props, State> {
       children,
       style,
       sets: { from = 0, to = 180 },
+      direction,
       ...props
     } = this.props;
 

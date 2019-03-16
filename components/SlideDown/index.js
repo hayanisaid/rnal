@@ -16,10 +16,10 @@ type State = {
 export default class SlideUp extends Component<Props, State> {
   state = {
     animatedValue: new Animated.Value(0),
-    duration: this.props.duration || 500
+    duration: this.props.duration || 1000
   };
   static defaultProps = {
-    duration: 300
+    duration: 100
   };
   componentDidMount() {
     let { startWhen } = this.props;

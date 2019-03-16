@@ -54,7 +54,7 @@ export default class SlideLeft extends Component<Props, State> {
             {
               translateX: animatedValue.interpolate({
                 inputRange: [0, 1],
-                outputRange: [-300, 0]
+                outputRange: [300, 0]
               })
             },
             { perspective: 1000 }
