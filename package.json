@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "enzyme-adapter-react-16": "^1.10.0",
+    "jest-enzyme": "^7.0.2",
     "react": "16.6.3",
     "react-native": "0.58.4",
     "styled-components": "^4.1.3"
@@ -28,6 +29,9 @@
     "animation",
     "react-native animation"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "Said Hayani",
   "license": "MIT",
   "repository": {
@@ -38,6 +42,33 @@
     "url": "https://github.com/hayanisaid/react-native-animation-library/issues"
   },
   "jest": {
-    "preset": "react-native"
+    "testMatch": [
+      "<rootDir>/Tests/**/*.js",
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "globals": {
+      "baseURL": "blah"
+    },
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "App"
+    ],
+    "preset": "react-native",
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+      "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+    },
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "setupFiles": [
+      "<rootDir>/_tests_/Tests-Setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-navigation-redux-helpers)",
+      "node_modules/(?!(jest-)?react-native|react-navigation|native)"
+    ]
   }
 }
