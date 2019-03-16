@@ -20,6 +20,14 @@
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3"
   },
+  "keywords": [
+    "android",
+    "ios",
+    "react native",
+    "component library",
+    "animation",
+    "react-native animation"
+  ],
   "author": "Said Hayani",
   "license": "MIT",
   "repository": {
