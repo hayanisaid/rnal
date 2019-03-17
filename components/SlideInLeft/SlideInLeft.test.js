@@ -3,24 +3,24 @@ import { View } from "react-native";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import SlideDown from "./index";
+import SlideInLeft from "./index";
 
-describe("Testing SlideDown component component", () => {
+describe("Testing SlideInLeft component component", () => {
   it("renders visible", () => {
-    const Wrapper = shallow(<SlideDown startWhen={true} />);
+    const Wrapper = shallow(<SlideInLeft startWhen={true} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
   it("renders invisible", () => {
-    const Wrapper = shallow(<SlideDown startWhen={false} />);
+    const Wrapper = shallow(<SlideInLeft startWhen={false} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
   it("Check it has  children", () => {
     const wrapper = shallow(
-      <SlideDown>
+      <SlideInLeft>
         <View testID="card" />
-      </SlideDown>
+      </SlideInLeft>
     );
     expect(wrapper.findWhere(node => node.prop("testID") === "card")).toExist();
   });

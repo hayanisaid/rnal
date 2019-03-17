@@ -8,7 +8,7 @@ exports[`Testing Rotate component component renders invisible 1`] = `
     Object {
       "transform": Array [
         Object {
-          "translateY": -300,
+          "translateX": 300,
         },
         Object {
           "perspective": 1000,
@@ -27,7 +27,7 @@ exports[`Testing Rotate component component renders visible 1`] = `
     Object {
       "transform": Array [
         Object {
-          "translateY": -300,
+          "translateX": 300,
         },
         Object {
           "perspective": 1000,
@@ -38,7 +38,7 @@ exports[`Testing Rotate component component renders visible 1`] = `
 />
 `;
 
-exports[`Testing SlideDown component component renders invisible 1`] = `
+exports[`Testing SlideInLeft component component renders invisible 1`] = `
 <AnimatedComponent
   duration={100}
   startWhen={false}
@@ -46,7 +46,7 @@ exports[`Testing SlideDown component component renders invisible 1`] = `
     Object {
       "transform": Array [
         Object {
-          "translateY": -300,
+          "translateX": 300,
         },
         Object {
           "perspective": 1000,
@@ -57,7 +57,7 @@ exports[`Testing SlideDown component component renders invisible 1`] = `
 />
 `;
 
-exports[`Testing SlideDown component component renders visible 1`] = `
+exports[`Testing SlideInLeft component component renders visible 1`] = `
 <AnimatedComponent
   duration={100}
   startWhen={true}
@@ -65,7 +65,7 @@ exports[`Testing SlideDown component component renders visible 1`] = `
     Object {
       "transform": Array [
         Object {
-          "translateY": -300,
+          "translateX": 300,
         },
         Object {
           "perspective": 1000,
