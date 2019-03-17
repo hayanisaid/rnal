@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Fade component component renders invisible 1`] = `
+<AnimatedComponent
+  duration={500}
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+/>
+`;
+
+exports[`Testing Fade component component renders visible 1`] = `
+<AnimatedComponent
+  duration={500}
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+/>
+`;
+
+exports[`renders invisible 1`] = `
+<AnimatedComponent
+  duration={500}
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+/>
+`;
+
+exports[`renders visible 1`] = `
+<AnimatedComponent
+  duration={500}
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+/>
+`;
