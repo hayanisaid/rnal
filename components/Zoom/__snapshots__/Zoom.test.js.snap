@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Zoom component component renders invisible 1`] = `
+<AnimatedComponent
+  duration={100}
+  infinite={false}
+  startWhen={false}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`Testing Zoom component component renders visible 1`] = `
+<AnimatedComponent
+  duration={100}
+  infinite={false}
+  startWhen={true}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
