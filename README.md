@@ -44,3 +44,11 @@ export default class App extends Component<Props, State> {
 
  ## Options and props 🎁
  
+Type | Value | Description
+--- | --- | ---
+"system" (default) | N/A | Play the audio track that matches the system language. If none match, play the first track.
+"disabled" | N/A | Turn off audio
+"title" | string | Play the audio track with the title specified as the Value, e.g. "French"
+"language" | string | Play the audio track with the language specified as the Value, e.g. "fr"
+"index" | number | Play the audio track with the index specified as the value, e.g. 0
+ 
