@@ -3,24 +3,24 @@ import { View } from "react-native";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import Fade from "./index";
+import Rotate from "./index";
 
-describe("Testing Fade component component", () => {
+describe("Testing Rotate component component", () => {
   it("renders visible", () => {
-    const Wrapper = shallow(<Fade startWhen={true} />);
+    const Wrapper = shallow(<Rotate startWhen={true} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
   it("renders invisible", () => {
-    const Wrapper = shallow(<Fade startWhen={false} />);
+    const Wrapper = shallow(<Rotate startWhen={false} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
   it("makes have children", () => {
     const wrapper = shallow(
-      <Fade>
+      <Rotate>
         <View testID="card" />
-      </Fade>
+      </Rotate>
     );
     expect(wrapper.findWhere(node => node.prop("testID") === "card")).toExist();
   });

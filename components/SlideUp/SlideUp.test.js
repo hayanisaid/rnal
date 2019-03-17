@@ -3,24 +3,24 @@ import { View } from "react-native";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
-import Fade from "./index";
+import SlideUp from "./index";
 
-describe("Testing Fade component component", () => {
+describe("Testing SlideUp component component", () => {
   it("renders visible", () => {
-    const Wrapper = shallow(<Fade startWhen={true} />);
+    const Wrapper = shallow(<SlideUp startWhen={true} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
   it("renders invisible", () => {
-    const Wrapper = shallow(<Fade startWhen={false} />);
+    const Wrapper = shallow(<SlideUp startWhen={false} />);
     expect(Wrapper).toMatchSnapshot();
   });
 
-  it("makes have children", () => {
+  it("Check it has  children", () => {
     const wrapper = shallow(
-      <Fade>
+      <SlideUp>
         <View testID="card" />
-      </Fade>
+      </SlideUp>
     );
     expect(wrapper.findWhere(node => node.prop("testID") === "card")).toExist();
   });

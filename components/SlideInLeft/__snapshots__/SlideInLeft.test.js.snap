@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Rotate component component renders invisible 1`] = `
+<AnimatedComponent
+  duration={100}
+  startWhen={false}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": 300,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`Testing Rotate component component renders visible 1`] = `
+<AnimatedComponent
+  duration={100}
+  startWhen={true}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": 300,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`Testing SlideInLeft component component renders invisible 1`] = `
+<AnimatedComponent
+  duration={100}
+  startWhen={false}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": 300,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`Testing SlideInLeft component component renders visible 1`] = `
+<AnimatedComponent
+  duration={100}
+  startWhen={true}
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateX": 300,
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
