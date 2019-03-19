@@ -2,7 +2,7 @@
 <img src="./images/Fade.gif"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 5px; width:200px" />
-     <img src="./images/ZoomIn.gif"
+     <img src="./images/SlideUp.gif"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 5px; width:200px" />
       <img src="./images/infinite.gif"
