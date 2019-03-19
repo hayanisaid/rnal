@@ -1,0 +1,11 @@
+language: node_js
+env: -API_KEY=postgres
+install:
+  - npm  install
+deploy:
+  provider: npm
+  email: "YOUR_EMAIL_ADDRESS"
+  api_key: "YOUR_AUTH_TOKEN"
+  on:
+    tags: true
+    branch: master
