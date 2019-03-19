@@ -8,6 +8,9 @@
       <img src="./images/infinite.gif"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px; width:200px" />
+           <img src="./images/SlideInRight.gif"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px; width:200px" />
 
 # Installation ⚓️
 - NPM
