@@ -18,11 +18,11 @@ yarn add rnal
 ```
 import { Fade } from "rnal";
 export default class App extends Component<Props, State> {
-  state = {
-    ready: false
-  };
+
+
+
   render() {
-    let { ready } = this.state;
+  
     return (
       <View style={{flex:1}}>
         <Fade >
@@ -41,18 +41,7 @@ export default class App extends Component<Props, State> {
 
 
 ```
-```
-type Props = {
-  children: any,
-  style: Object,
-  duration: number,
-  startWhen: boolean,
-  sets: Object,
-  infinite: boolean,
-  direction: string
-}
 
-```
 
  ## Options and props 🎁
  
