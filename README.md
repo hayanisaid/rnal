@@ -41,14 +41,26 @@ export default class App extends Component<Props, State> {
 
 
 ```
+```
+type Props = {
+  children: any,
+  style: Object,
+  duration: number,
+  startWhen: boolean,
+  sets: Object,
+  infinite: boolean,
+  direction: string
+}
+
+```
 
  ## Options and props 🎁
  
-Type | Value | Description
---- | --- | ---
-"system" (default) | N/A | Play the audio track that matches the system language. If none match, play the first track.
-"disabled" | N/A | Turn off audio
-"title" | string | Play the audio track with the title specified as the Value, e.g. "French"
-"language" | string | Play the audio track with the language specified as the Value, e.g. "fr"
-"index" | number | Play the audio track with the index specified as the value, e.g. 0
- 
+Props | Value | Default | Description
+--- | --- | --- | ---
+duration | number | 300 | Play the audio track that matches the system language. If none match, play the first track.
+startWhen | boolean | false | set when the animation should start, by default the animation start when the component mount.
+infinite | boolean | false | Determine if the animation is infinite or just run once.
+direction | string | 300 | specify the direction of the animation ex("toRight", "toLeft", "up","down).
+sets | Object | `{from:0,to:180}` | set the point start and the end  of the animation, used with `Rotate` animation .
+
