@@ -1,16 +1,20 @@
 ## A React Native animation library that aime to make using Animation API easly 🚀
 <img src="./images/Fade.gif"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 5px; width:200px" />
+     height="400px"
+     style="float: left; margin-right: 5px; width:200px" height:400px  />
      <img src="./images/SlideUp.gif"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 5px; width:200px" />
+       height="400px"
+     style="float: left; margin-right: 5px; width:200px" height:400px  />
       <img src="./images/infinite.gif"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px; width:200px" />
+       height="400px"
+     style="float: left; margin-right: 5px; width:200px" height:400px  />
            <img src="./images/SlideInRight.gif"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px; width:200px" />
+       height="400px"
+     style="float: left; margin-right: 5px; width:200px" height:400px />
 
 # Installation ⚓️
 - NPM
