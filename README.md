@@ -1,4 +1,4 @@
-## A React Native animation library that aime to make using Animation API easly 🚀
+## Small React Native animatio library that make using animation easy 🚀
 <img src="./images/Fade.gif"
      alt="Markdown Monster icon"
      width="150px"
@@ -37,7 +37,7 @@ npm -i rnal --save
 yarn add rnal
 ```
 
-# Simple Usage 🗝
+# Simply usage 💪🏽 🙌
 
 ## 🎈 Fade  🎈
 ```
