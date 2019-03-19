@@ -1,4 +1,4 @@
-## Small React Native animatio library that make using animation easy 🚀
+##  React Native animation library that make using the animations easy 🚀
 <img src="./images/Fade.gif"
      alt="Markdown Monster icon"
      width="150px"
