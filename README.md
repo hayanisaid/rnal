@@ -37,7 +37,7 @@ npm -i rnal --save
 yarn add rnal
 ```
 
-# Simply usage 💪🏽 🙌
+# Simple usage 💪🏽 🙌
 
 ## 🎈 Fade  🎈
 ```
