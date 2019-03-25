@@ -27,7 +27,7 @@ type State = {
   ready: boolean
 };
 
-import { Fade } from "./../index";
+import { Fade } from "rnal";
 export default class App extends Component<Props, State> {
   state = {
     ready: false
