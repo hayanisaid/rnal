@@ -1,6 +1,6 @@
 {
   "name": "rnal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Small animation library for  react-native'",
   "main": "index.js",
   "scripts": {
