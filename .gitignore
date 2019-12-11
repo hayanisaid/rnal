@@ -1,3 +1,6 @@
+# Editor-specific
+.vscode
+
 # OSX
 #
 .DS_Store
