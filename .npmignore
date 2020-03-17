@@ -11,5 +11,8 @@ config.gypi
 CVS
 npm-debug.log
 node_modules
+node_modules/
 android
 ios
+images/
+.github/
