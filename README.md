@@ -29,7 +29,7 @@
 # Installation ⚓️
 - NPM
 ```
-npm -i rnal --save
+npm install rnal --save
 ```
 
 - Yarn
