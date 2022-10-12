@@ -17,7 +17,7 @@
     "metro-react-native-babel-preset": "0.51.1",
     "react": "16.6.3",
     "react-dom": "^16.8.4",
-    "react-native": "0.58.4",
+    "react-native": "0.70.2",
     "react-test-renderer": "16.6.3",
     "styled-components": "^4.1.3"
   },
